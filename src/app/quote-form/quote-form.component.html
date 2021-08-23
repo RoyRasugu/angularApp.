@@ -1,0 +1,34 @@
+<div class="container-fluid">
+    <h2 class="text-center">Add Quote</h2>
+    <form (ngSubmit)='submitQuote() ;quotesForm.resetForm({})' #quotesForm='ngForm'>
+        <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" class="form-control" id="name" [(ngModel)]="quoted.name" name="name" #name='ngModel' required>
+            <div [hidden]="name.valid || name.pristine" class="alert alert-danger p-0">
+                    <p>Your name is required.</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="name">Quote Title</label>
+            <input type="text" class="form-control" id="title" [(ngModel)]="quoted.title" name="title" #title='ngModel' required>
+            <div [hidden]="title.valid || title.pristine" class="alert alert-danger p-0">
+                   <p>Title is required.</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="description">Quote</label>
+            <textarea class="form-control" id="quote" rows="2" [(ngModel)]="quoted.quote" name="quote" #quote='ngModel' required></textarea>
+            <div [hidden]="quote.valid || quote.pristine" class="alert alert-danger p-0">
+                    <p>Please fill in the field.</p> 
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="name"> Quote Author</label>
+            <input type="text" class="form-control" id="author" [(ngModel)]="quoted.author" name="author" #author='ngModel' required>
+            <div [hidden]="author.valid || author.pristine" class="alert alert-danger p-0">
+                   <p>Author name is required.</p>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-sm btn-success">Add Quote</button>
+    </form>
+  </div>
