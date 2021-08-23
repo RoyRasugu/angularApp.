@@ -2,10 +2,15 @@
     color: white;
     background: transparent;
     font-weight: 570;
+    font-size: 16px;
+    font-family: "Poppins", "Arial", "Helvetica Neue", sans-serif;
   }
   label{
     color: white;
     font-weight: 600;
+  }
+  .text-center{
+      color: #fff;
   }
   hr{
     width: 50%;
@@ -18,11 +23,11 @@
     padding-top: 2%;
   }
   .container-fluid{
-    background-color: rgba(0, 0, 0, 0.374);
+    background-color: black;
     border-radius: 4px;
     padding-bottom: 5%;
     box-shadow: 2px 2px 3px 2px black;
-    font-family: 'Rajdhani, san-serif', cursive;
+    font-family: 'Rajdhani, san-serif';
     margin-bottom: 5%;
   }
   
